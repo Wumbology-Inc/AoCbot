@@ -1,0 +1,12 @@
+# Caches
+.vscode/
+__pycache__/
+
+# Virtual Envs
+.*env/
+
+# Jupyter
+*.ipynb*
+
+# Logs
+*.log
