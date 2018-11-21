@@ -14,7 +14,7 @@ setup(
     name="AoCbot",
     author="sco1",
     url="https://github.com/sco1/AoCbot.git",
-    version="v0.1.0",
+    version="v1.0.0",
     description="A Python Discord bot for Advent of Code",
     license="MIT",
     long_description=readme,

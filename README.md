@@ -2,6 +2,8 @@
 
 A small Discord bot for the yearly [Advent of Code](https://adventofcode.com) event!
 
+Head over to the [Python Discord](https://discord.gg/3Abzge7) to see it in action!
+
 Built with [Discord.py](https://github.com/Rapptz/discord.py)
 
 ## What is Advent of Code?
