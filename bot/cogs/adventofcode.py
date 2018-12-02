@@ -97,6 +97,7 @@ class AdventOfCode:
 
             # Build embed
             aoc_embed = discord.Embed(
+                description=f"Total members: {len(self.cached_private_leaderboard.members)}",
                 colour=discord.Colour.green(),
                 timestamp=self.cached_private_leaderboard.last_updated,
             )
