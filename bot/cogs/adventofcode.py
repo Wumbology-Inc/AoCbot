@@ -459,22 +459,18 @@ class AocGlobalLeaderboard:
 
         aoc_url = f"https://adventofcode.com/{AocConfig.year}/leaderboard"
 
-        async with aiohttp.ClientSession(
-            cookies=AOC_SESSION_COOKIE, headers=AOC_REQUEST_HEADER
-        ) as session:
+        async with aiohttp.ClientSession(headers=AOC_REQUEST_HEADER) as session:
             async with session.get(aoc_url) as resp:
                 if resp.status == 200:
                     raw_html = await resp.text()
                 else:
-                    log.warning(
-                        f"Bad response received from AoC ({resp.status}), check session cookie"
-                    )
+                    log.warning(f"Bad response received from AoC ({resp.status})")
                     resp.raise_for_status()
 
         soup = BeautifulSoup(raw_html, "html.parser")
         ele = soup.find_all("div", class_="leaderboard-entry")
 
-        exp = r"(?:[ ]{,2}(\d+)\))?[ ]+(\d+)\s+([\w\(\)#\d ]+)"
+        exp = r"(?:[ ]{,2}(\d+)\))?[ ]+(\d+)\s+([\w\(\)#\-\d ]+)"
 
         lb_list = []
         for entry in ele:
@@ -510,7 +506,12 @@ class AocGlobalLeaderboard:
         header = f"{' '*4}{'Score'} {'Name':^25}\n{'-'*36}"
         table = ""
         for member in members_to_print:
-            table += f"{member[0]:3}) {member[1]:4} {member[2]:25.25}\n"
+            # In the event of a tie, rank is None
+            if member[0]:
+                rank = f"{member[0]:3})"
+            else:
+                rank = f"{' ':4}"
+            table += f"{rank} {member[1]:4} {member[2]:25.25}\n"
         else:
             table = f"```{header}\n{table}```"
 
