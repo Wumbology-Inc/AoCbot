@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "AoCbot"
-version = "1.2.0"
+version = "1.2.1"
 description = "A d.py Cog for Advent of Code!"
 license="MIT"
 authors = ["sco1 <sco1.git@gmail.com>"]
