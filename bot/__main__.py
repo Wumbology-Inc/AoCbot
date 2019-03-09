@@ -1,6 +1,5 @@
 import logging
 from os import environ
-from pathlib import Path
 
 from discord.ext import commands
 

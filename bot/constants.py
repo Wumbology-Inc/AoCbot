@@ -1,8 +1,10 @@
 from os import environ
 
+
 class Emojis:
     star = "\u2B50"
     christmas_tree = u"\U0001F384"
+
 
 class AdventOfCode:
     leaderboard_cache_age_threshold_seconds = 3600
