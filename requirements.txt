@@ -1,4 +1,0 @@
-# Discord.py Rewrite Branch
-git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py
-
-beautifulsoup4 >= 4.6.0
