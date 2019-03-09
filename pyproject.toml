@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "aocbot"
+name = "AoCbot"
 version = "1.2.0"
 description = "A d.py Cog for Advent of Code!"
 license="MIT"
