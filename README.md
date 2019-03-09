@@ -17,21 +17,14 @@ AoCbot provides a set of helper commands for users participating in the event. T
 ## Installation
 With Python 3.7 or newer installed, clone (or download) the repository from GitHub:
 
-```
+```bash
 $ git clone https://github.com/sco1/AoCbot.git
 ```
 
-Install and activate a virtual environment for the bot to run in. This is optional but highly encouraged:
+Install the project using Poetry
 
-```
-$ python3 -m venv ./.venv
-$ source ./.venv/bin/activate
-```
-
-Install project requirements:
-
-```
-$ pip install -r requirements.txt
+```bash
+$ poetry install
 ```
 
 ### Configuration
@@ -63,10 +56,11 @@ class AdventOfCode:
 Your private leaderboard details need to be inserted into the `"Join our private leaderboard!"` field of the JSON file, located in `./bot/resources/advent_of_code/about.json`
 
 ## Running the bot
-After installing on the desired host, the bot can be run using:
+After installing on the desired host with Poetry, the bot can be run using:
 
-```
-$ python3 -m bot
+```bash
+$ poetry shell
+$ python -m bot
 ```
 
 ## Command reference
