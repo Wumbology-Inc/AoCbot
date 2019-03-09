@@ -19,7 +19,7 @@ AOC_REQUEST_HEADER = {"user-agent": "AoC Event Bot"}
 AOC_SESSION_COOKIE = {"session": AocConfig.session_cookie}
 
 
-class AdventOfCode:
+class AdventOfCode(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
