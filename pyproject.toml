@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "AoCbot"
-version = "1.2.1"
+version = "2019.2"
 description = "A d.py Cog for Advent of Code!"
 license="MIT"
 authors = ["sco1 <sco1.git@gmail.com>"]
@@ -20,8 +20,8 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-"discord.py" = { git = "https://github.com/Rapptz/discord.py.git", branch = "rewrite" }
 beautifulsoup4 = "^4.7"
+"discord.py" = "^1.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.7"
