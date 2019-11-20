@@ -12,4 +12,4 @@ class AdventOfCode:
     leaderboard_join_code = None
     leaderboard_max_displayed_members = 10
     session_cookie = environ.get("AOC_SESSION_COOKIE")
-    year = 2018
+    year = 2019
